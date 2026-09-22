@@ -75,3 +75,72 @@ main{padding:70px 0 90px}
  .content table{display:block;overflow-x:auto;white-space:normal}
  .footer-grid{grid-template-columns:1fr}
 }
+
+
+/* v2 — screenshot-led, dimensional Sugar Rush design */
+.hero{
+  background-image:url('../images/sugar-rush-cover.webp');
+  background-position:center;
+  background-size:cover;
+}
+.hero:after{
+  background:
+    linear-gradient(90deg,rgba(38,7,67,.96) 0%,rgba(56,12,93,.86) 35%,rgba(63,15,102,.35) 62%,rgba(45,9,79,.08) 100%),
+    linear-gradient(0deg,rgba(35,6,63,.28),transparent 50%);
+}
+.hero-copy{
+  background:linear-gradient(135deg,rgba(55,12,91,.46),rgba(55,12,91,.10));
+  border:1px solid rgba(255,255,255,.13);
+  box-shadow:0 30px 90px rgba(24,3,42,.28);
+  backdrop-filter:blur(4px);
+  padding:38px 40px;
+  border-radius:28px;
+  margin:58px 0;
+}
+.game-shot{
+  margin:34px 0 44px;
+  border-radius:26px;
+  overflow:hidden;
+  border:1px solid rgba(103,39,151,.18);
+  box-shadow:0 24px 70px rgba(66,25,94,.18),0 5px 18px rgba(66,25,94,.10);
+  background:#421268;
+}
+.game-shot img{width:100%;height:auto;object-fit:contain}
+.game-shot figcaption{padding:12px 16px;background:#fff;color:#725f82;font-size:13px}
+.anchor-card{
+  margin:0 0 38px;
+  padding:24px 26px;
+  background:linear-gradient(145deg,#fff,#fff7fc);
+  border:1px solid var(--line);
+  border-radius:22px;
+  box-shadow:0 15px 45px rgba(70,25,101,.09);
+}
+.anchor-card strong{display:block;font-size:14px;color:#7a2aad;text-transform:uppercase;letter-spacing:.055em;margin-bottom:12px}
+.anchor-list{display:flex;flex-wrap:wrap;gap:9px;margin:0;padding:0;list-style:none}
+.anchor-list a{
+  display:block;text-decoration:none;padding:9px 12px;border-radius:999px;
+  background:#f3e9fa;border:1px solid #e5d2f2;color:#5b267d;font-weight:800;font-size:13px;
+}
+.anchor-list a:hover{background:#6726a1;color:#fff;border-color:#6726a1}
+.ref-card{
+  position:relative;isolation:isolate;overflow:hidden;margin:48px 0;
+  display:grid;grid-template-columns:1.05fr .95fr;min-height:340px;
+  border-radius:30px;background:#4b1378;color:#fff;
+  box-shadow:0 30px 80px rgba(68,20,102,.22);
+}
+.ref-card-copy{padding:38px;align-self:center;position:relative;z-index:2}
+.ref-card h2{color:#fff;margin:0 0 14px;font-size:34px}
+.ref-card p{color:#f7eafe;margin:0 0 22px}
+.ref-card-media{background:url('../images/sugar-rush-game.webp') center/cover no-repeat;min-height:340px;position:relative}
+.ref-card-media:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#4b1378 0%,rgba(75,19,120,.08) 35%,transparent)}
+.ref-btn{
+ display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
+ padding:14px 20px;border-radius:14px;font-weight:950;background:linear-gradient(135deg,#ffcf45,#ff7d45);
+ color:#3d1159;box-shadow:0 14px 30px rgba(255,151,55,.25)
+}
+.content h2[id],.content h3[id]{scroll-margin-top:105px}
+@media(max-width:800px){
+ .hero-copy{padding:28px 24px;margin:34px 0}
+ .ref-card{grid-template-columns:1fr}.ref-card-media{min-height:260px;order:-1}
+ .ref-card-media:before{background:linear-gradient(0deg,#4b1378 0%,rgba(75,19,120,.08) 38%,transparent)}
+}
